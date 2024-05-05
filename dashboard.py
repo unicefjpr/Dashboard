@@ -14,8 +14,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_excel(filename)
 else:
-    os.chdir(r"D:\SNCU Factsheet\Monthwise Data\Power BI")
-    df = pd.read_excel("March 2024.xlsx")
+     st.write("Please upload an Excel file.")
 
 col1, col2 = st.columns((2))
 df["admision_date"] = pd.to_datetime(df["admision_date"])
